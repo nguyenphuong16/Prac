@@ -1,7 +1,7 @@
 """CP1404/CP5632 Practical - Client code to use the Car class."""
 # Note that the import has a folder (module) in it.
 
-from prac6.car import Car
+from prac_06.car import Car
 
 
 def main():
@@ -17,9 +17,13 @@ def main():
 
     limo = Car("Limo", 100)
     limo.add_fuel(20)
-    print(limo.fuel)
+    print("fuel =", limo.fuel)
     limo.drive(115)
-    print(limo.odometer)
+    print("odo =", limo.odometer)
+
+    print("Limo {}, {}".format(limo.fuel, limo.odometer))
+    print("Limo {self.fuel}, {self.odometer}".format(self=limo))
 
 
-main()
+if __name__ == '__main__':
+    main()
